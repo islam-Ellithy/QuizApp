@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="lamaatech.com.quizapp.MainActivity.View.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="24dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/quiz_name"
+            android:textColor="@color/colorText"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/dolphine"
+                android:paddingBottom="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/dolphine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is it that animal?"
+                android:textColor="@color/colorText" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupQuestionOneDolphine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioButtonQuestionOneDolphin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dolphine"
+                    android:textColor="@color/colorText" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonQuestionOneDog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dog"
+                    android:textColor="@color/colorText" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/cat_image_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="What is that animal?"
+                android:textColor="@color/colorText" />
+
+            <EditText
+                android:id="@+id/editTextQuestionTwoAnswerCat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ex. elephant" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Check all animals only ?"
+                android:textColor="@color/colorText" />
+
+
+            <CheckBox
+                android:id="@+id/checkboxQuestionThreeChoiceCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cat" />
+
+            <CheckBox
+                android:id="@+id/checkboxQuestionThreeChoiceDog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog" />
+
+            <CheckBox
+                android:id="@+id/checkboxQuestionThreeChoiceBed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bed" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/cat_image_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dog" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="What is that animal?"
+                android:textColor="@color/colorText" />
+
+            <EditText
+                android:id="@+id/editTextQuestionFourAnswerDog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ex. elephant" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent"
+            android:onClick="onSubmitButtonClicked"
+            android:text="Submit"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+</ScrollView>
