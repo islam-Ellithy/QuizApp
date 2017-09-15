@@ -109,8 +109,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.IVie
             if (checkboxQuestionThreeChoiceDog.isChecked())
                 if (!checkboxQuestionThreeChoiceBed.isChecked())
                     score += SCORE_VALUE;
+                else
+                    score += 0;
         }
-
     }
 
     @Override

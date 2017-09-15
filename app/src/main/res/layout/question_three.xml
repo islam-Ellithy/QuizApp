@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/check_all_animals_only"
+        android:textColor="@color/colorText" />
+
+
+    <CheckBox
+        android:id="@+id/checkboxQuestionThreeChoiceCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cat" />
+
+    <CheckBox
+        android:id="@+id/checkboxQuestionThreeChoiceDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dog" />
+
+    <CheckBox
+        android:id="@+id/checkboxQuestionThreeChoiceBed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bed" />
+</LinearLayout>

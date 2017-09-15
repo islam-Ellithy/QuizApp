@@ -6,4 +6,9 @@
     <string name="cat">Cat</string>
     <string name="dog">Dog</string>
     <string name="dolphine">Dolphin</string>
+    <string name="what_is_that_animal">What is that animal?</string>
+    <string name="ex_elephant">ex. elephant</string>
+    <string name="check_all_animals_only">Check all animals only ?</string>
+    <string name="bed">Bed</string>
+    <string name="submit">Submit</string>
 </resources>
