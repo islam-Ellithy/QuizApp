@@ -5,23 +5,40 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import lamaatech.com.quizapp.MainActivity.Model.MainContract;
 import lamaatech.com.quizapp.R;
 
 public class MainActivity extends AppCompatActivity implements MainContract.IView {
 
-    private EditText editTextQuestionTwoAnswerCat;
-    private EditText editTextQuestionFourAnswerDog;
-    private RadioGroup radioGroup;
-    private CheckBox checkboxQuestionThreeChoiceCat;
-    private CheckBox checkboxQuestionThreeChoiceDog;
-    private CheckBox checkboxQuestionThreeChoiceBed;
+    //Question one answer Radio button answer 'Dolphin'
+    //radioButtonDolphin  radiobutton
+    //radioButtonDog      radiobutton
+    //Question Two answer 'Cat' via edit text
+    //Question Three 3 checkboxes 2 anwers are Cat & Dog
+    //Question Four one edittext answer is Dog
+
+    @BindView(R.id.editTextQuestionTwoAnswerCat)
+    protected EditText editTextQuestionTwoAnswerCat;
+    @BindView(R.id.editTextQuestionFourAnswerDog)
+    protected EditText editTextQuestionFourAnswerDog;
+    @BindView(R.id.radioGroupQuestionOneDolphine)
+    protected RadioGroup radioGroup;
+    @BindView(R.id.checkboxQuestionThreeChoiceCat)
+    protected CheckBox checkboxQuestionThreeChoiceCat;
+    @BindView(R.id.checkboxQuestionThreeChoiceDog)
+    protected CheckBox checkboxQuestionThreeChoiceDog;
+    @BindView(R.id.checkboxQuestionThreeChoiceBed)
+    protected CheckBox checkboxQuestionThreeChoiceBed;
+    @BindView(R.id.toolbar)
+    protected Toolbar toolbar;
     private Integer score = 0;
     private static final int SCORE_VALUE = 10;
 
@@ -29,29 +46,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.IVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
-        bindView();
-
-    }
-
-    private void bindView() {
-        //Question one answer Radio button answer 'Dolphin'
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroupQuestionOneDolphine);
-        //radioButtonDolphin  radiobutton
-        //radioButtonDog      radiobutton
-
-        //Question Two answer 'Cat' via edit text
-        editTextQuestionTwoAnswerCat = (EditText) findViewById(R.id.editTextQuestionTwoAnswerCat);
-
-        //Question Three 3 checkboxes 2 anwers are Cat & Dog
-        checkboxQuestionThreeChoiceCat = (CheckBox) findViewById(R.id.checkboxQuestionThreeChoiceCat);
-        checkboxQuestionThreeChoiceDog = (CheckBox) findViewById(R.id.checkboxQuestionThreeChoiceDog);
-        checkboxQuestionThreeChoiceBed = (CheckBox) findViewById(R.id.checkboxQuestionThreeChoiceBed);
-
-        //Question Four one edittext answer is Dog
-        editTextQuestionFourAnswerDog = (EditText) findViewById(R.id.editTextQuestionFourAnswerDog);
     }
 
     @Override
@@ -76,8 +73,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.IVie
         return super.onOptionsItemSelected(item);
     }
 
+
     @Override
-    public void onSubmitButtonClicked(View view) {
+    public @OnClick(R.id.submitButton)
+    void onSubmitButtonClicked() {
         questionOneScore();
         questionTwoScore();
         questionThreeScore();
