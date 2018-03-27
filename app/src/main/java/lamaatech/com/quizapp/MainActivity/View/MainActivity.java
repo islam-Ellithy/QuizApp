@@ -1,5 +1,6 @@
 package lamaatech.com.quizapp.MainActivity.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -82,6 +83,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.IVie
         questionThreeScore();
         questionFourScore();
         Toast.makeText(this, String.valueOf(score), Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(MainActivity.this,ScoreActivity.class);
+
+        intent.putExtra("score",score);
+
+        startActivity(intent);
+
         score = 0;
     }
 
